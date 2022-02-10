@@ -29,7 +29,6 @@ $(() =>{
     $('#stampaLista').on('click', '.rimuovi', function (){
         let indice = $(this).closest('li').index();
         todolist.splice(indice, 1);
-        $(this).closest('li').remove()
         localStorage.setItem('listaTodo', JSON.stringify(todolist))
         stampaTodo();
     });
